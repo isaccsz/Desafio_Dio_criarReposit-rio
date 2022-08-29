@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introdução ao Git&Github</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bem Vindo!</h1>
+        <h2>Nesta pagina, você encontrará um resumo sobre o que foi visto no curso Introdução ao Git e Github</h2>
+    </header>
+    <div id="navigation">
+        <nav>
+            <ul>
+                <a href="#gitIntro"><li>Introdução ao Git</li></a>
+                <a href="#cliNavigation"><li>Navegação via Command Line Interface</li></a>
+                <a href="#backOfGit"><li>Funcinamento do Git por baixo dos panos</li></a>
+                <a href="#gitCommands"><li>Primeiros Comandos com Git</li></a>
+                <a href="#gitHubIntro"><li>Introdução ao GitHub</li></a>
+                <a href="#solving_conflicts"><li>Resolvendo Conflitos</li></a>
+            </ul>
+            <div class="flex">   
+                <a href="https://www.linkedin.com/in/isacsz/" target="_blank"><p>By: Isac Cruz</p></a>
+                <img src="/images/Eu.jpeg" alt="Isac Cruz">
+            </div>
+        </nav>
+    </div>
+    <section id="gitIntro">
+        <article>
+            <h1>Enfim, o que é o Git, e para que serve?</h1>
+            <cite>
+                "O Git é uma ferramenta para controle de versão de arquivos, utilizado para controlar versoes
+                de códigos-fonte e desenvolvimento colaborativo." <sub>Fonte: GeekHunter</sub> 
+            </cite>
+            <p>
+                Criado em 2005 por Linus Torvalds, o Git facilita através do uso de uma
+                ferramenta de CLI (Command Line Interface), ou seja, uma Interface de Linguagem de Comandos,
+                o <b>versionamento</b> de códigos. O versionamento permite que os programadores saibam
+                quando e quais alterações foram feitas no código.
+            </p>
+            <p>
+                Normalmente, o Prompt de comando pode ser utilizado para iniciar o processo de versionamento,
+                porém o próprio Git fornece duas interfaces para serem utilizadas, o Git Bash, que é uma
+                Command Line Interface, e o Git GUI que se trata de uma Interface gráfica.
+            </p>
+            <p>
+                A principal diferença entre o Git e o Github se encontra em como esses arquivos
+                serão armazenados. No Git os repositórios são armazenados de maneira local, ou seja na
+                maquina do desenvolvedor, enquanto o Github conta com um metodo de armazenamento em <b>Nuvem</b>,
+                também pode se dizer que ele é <cite> "Um sistema distribuído é uma coleção de programas de 
+                computador que utilizam recursos computacionais em vários pontos centrais 
+                de computação diferentes para atingir um objetivo comum e compartilhado. 
+                Os sistemas distribuídos visam remover gargalos ou pontos centrais de falha de um sistema. </cite> <sub>Fonte: Atlassian</sub>
+            </p>
+        </article>
+    </section>
+    <section id="cliNavigation">
+        <article>
+            <h1>Navegação com <i>Command Line Interface</i></h1>
+            <p>
+                <cite>"Geralmente, ela representa um programa funcionando através de linhas de comando, 
+                que aceita entrada de texto para executar funções do sistema operacional."</cite> <sub>Fonte: zup.com.br</sub>
+            </p>
+            <p>
+                A seguir, os comandos basicos e suas funcionalidades. Importante enfatizar
+                que existem diferenças para alguns comandos para usuarios de diferentes
+                sistemas operacionais.
+
+                <table>
+                    <caption>Windows</caption>
+                    <tr>
+                        <td class="command">cd</td>
+                        <td>Comando que permite a navegação entre os diretórios</td>
+                    </tr>
+                    <tr>
+                        <td class="command">dir</td>
+                        <td>Exibe em formato de lista todas as pastas no diretorio atual</td>
+                    </tr>
+                    <tr>
+                        <td class="command">mkdir</td>
+                        <td>Utilizado para criar diretorios</td>
+                    </tr>
+                    <tr>
+                        <td class="command">Del</td>
+                        <td>Deleta os arquivos presentes em um diretorio</td>
+                    </tr>
+                    <tr>
+                        <td class="command">rmdir</td>
+                        <td>Remove um diretorio específico</td>
+                    </tr>
+                    <tr>
+                        <td class="command">cls</td>
+                        <td>Limpa a tela do console</td>
+                    </tr>
+                </table>
+                <p></p>
+                <table>
+                    <caption>Linux</caption>
+                    <tr>
+                        <td class="command">cd</td>
+                        <td>Comando que permite a navegação entre os diretórios</td>
+                    </tr>
+                    <tr>
+                        <td class="command">ls</td>
+                        <td>Exibe em formato de lista todas as pastas no diretorio atual</td>
+                    </tr>
+                    <tr>
+                        <td class="command">mkdir</td>
+                        <td>Utilizado para criar diretorios</td>
+                    </tr>
+                    <tr>
+                        <td class="command">Del</td>
+                        <td>Deleta os arquivos presentes em um diretorio</td>
+                    </tr>
+                    <tr>
+                        <td class="command">rm, rf</td>
+                        <td>Remove um diretorio específico</td>
+                    </tr>
+                    <tr>
+                        <td class="command">Ctrl+L</td>
+                        <td>Limpa a tela do console</td>
+                    </tr>
+                </table>
+            </p>
+        </article>
+    </section>
+    <section id="backOfGit">
+        <article>
+                <h1>Git por baixo dos panos</h1>
+                <p>
+                    Nesta etapa entraremos em um conceito mais abstrato e muito dificil de se resumir,
+                    portanto tentarei ser o mais breve possivel.
+                </p>
+
+                <p>
+                    Antes de entrarmos nos conceitos de objetos, precisamos primeiro esclarecer
+                    como o Git percebe uma modificação em seus arquivos.
+                </p>
+
+                <h3>SHA1</h3>
+                <p>
+                    O SHA1 básicamente é um algoritimo de encriptação, baseado em uma string de
+                    40 caracteres aleatórios. O Git utiliza este algoritmo para associa-lo à um
+                    arquivo ou diretorio. Sempre que algum arquivo ou diretório é modificado,
+                    sua referência, ou seja, seu hash também muda.
+                </p>
+
+                <p>
+                    A forma como o git funciona por baixo dos panos é através de objetos, e sobre como
+                    estes afetam os demais em sua cronologia.
+                    Basicamente se uma alteração for feita no objeto de nivel mais baixo, todos os demais
+                    objetos "parentes" deste que recebeu a modificação sofrerão uma alteração tambem.
+                </p>
+
+                <p>
+                    Os objetos fundamentais são divididos como:
+                </p>
+
+                <p>
+                    <strong>Blob:</strong> básicamente, de forma rudimentar, o objeto atuaria como um arquivo para algumas informações
+                    que se alguma delas sofre alteração, consequentemente seus parentes também serão alterados.
+                </p>
+                <p>
+                    <strong>Tree:</strong> funciona como um "container" para os demais objetos, podendo ser eles blobs, ou 
+                    outras trees. Assim como o bloob, se algum metadado de uma tree for alterado, a referência,
+                    ou seja, o SHA1 da tree também sera modificado.
+                </p>
+
+            </article>
+        </section>
+        <section id="gitCommands">
+            <article>
+            <h1>Primeiros comandos com o git</h1>
+            <p>
+                Agora que você ja sabe o básico sobre como o git funciona por baixo dos panos
+                (realmente o básico do básico, sugiro que veja as aulas do bootcamp), vamos dar
+                inicio ao primeiro repositório local. Nesta sessão tambem serão apresentados
+                os comandos para empurrar seus codigos para o GitHub.
+            </p>
+
+            <table>
+                <caption>Git Bash</caption>
+                <tr>
+                    <td class="command">git init</td>
+                    <td>Inicia um repositório local</td>
+                </tr>
+                <tr>
+                    <td class="command">git Status</td>
+                    <td>Exibe o estado atual do seu repositório, pendentes ou não de staging</td>
+                </tr>
+                <tr>
+                    <td class="command">git add</td>
+                    <td>Comando para adicionar arquivos para a área de staging</td>
+                </tr>
+                <tr>
+                    <td class="command">git branch -M "branch_name"</td>
+                    <td>Renomeia a branch atual</td>
+                </tr>
+                <tr>
+                    <td class="command">git commit -m "nome_commit"</td>
+                    <td>Envia os arquivos do stage para o status de tracked</td>
+                </tr>
+                <tr>
+                    <td class="command">git remote add origin "link do repositório github</td>
+                    <td>Cria o vínculo entre o armazenamento local e o github</td>
+                </tr>
+                <tr>
+                    <td class="command">git push -u origin branch_name</td>
+                    <td>Empurra os arquivos commitados para o github</td>
+                </tr>
+                <tr>
+                    <td class="command">git pull</td>
+                    <td>Transfere os arquivos armazenados no Github para a maquina local</td>
+                </tr>
+            </table>
+        </article>
+    </section>
+    <section id="gitHubIntro">
+        <article>
+            <h1>Introdução ao GitHub</h1>
+            <p>
+                Neste tópico aprenderemos a criar o repositório no github para receber
+                os arquivos locais da maquina. Por ser uma interface visual, despensa muitas
+                explicações (tentarei ser breve).
+            </p>
+            <p>
+                Na página inicial do GitHub (Assumindo que o leitor ja tem uma conta criada),
+                no canto superior esquerdo, abaixo da barra de pesquisas do GitHub, clique em
+                <b>New.</b>
+            </p>
+            <p>
+                A partir dessa parte ja é muito intuitívo, por se tratar de uma interface
+                gráfica meio que despensa muita explicação.
+                Preencha os dados e clique em <b>Create Repository.</b>
+            </p>
+            <p>
+                Pronto! Seu repositório esta criado, agora é só pegar sua URL, utilizar o comando
+                para criar a conexão entre o GitHub e a maquina local.
+            </p>
+        </article>
+    </section>
+    <section id="solving_conflicts">
+        <article>
+            <h1>Resolvendo Conflitos</h1>
+            <p>
+                Nesta sessão veremos como o Git responde aos "conflitos".
+            </p>
+            <p>
+                O Github permite que vários desenvolvedores trabalhem no mesmo código simultaneamente,
+                e isso é uma vantagem enorme quando se trata do tempo em que uma aplicação sera desenvolvida,
+                porém existe um caso que é muito conhecido e também é algo muito comum de se acontecer
+                quando se pensa em algum projeto muito grande e com muitos desenvolvedores trabalhando
+                em uma mesma linha de código, o que gera o conflito.
+            </p>
+
+            <p>
+                Quando o conflito ocorre, é necessario o desenvolvedor fazer o <b>Pull</b> dos arquivos no
+                repositório do GitHub.
+            </p>
+
+            <p>
+                Neste caso o git não tomará nenhuma atitude pelo desenvolvedor, ele simplesmente
+                devolve os casos que geraram o conflito para que o especialista tome a decisão
+                sobre o que fazer com o conflito.
+            </p>
+        </article>
+    </section>
+    <footer>
+        <b>É meu pô</b>&copy; Criado por: Isac Cruz de Souza
+    </footer>
+</body>
+</html>
