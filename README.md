@@ -6,15 +6,15 @@ Decidi desenvolver uma página web simples, utilizando apenas HTML e CSS, com in
 
 Abaixo, screenshots da página pronta:
 
-![image-20220828235821264](C:\Users\isacc\AppData\Roaming\Typora\typora-user-images\image-20220828235821264.png)
+![image](https://user-images.githubusercontent.com/107009198/187581871-c223ffde-7a38-4a67-8edb-e30aa00e6dbe.png)
 
-![image-20220828235838872](C:\Users\isacc\AppData\Roaming\Typora\typora-user-images\image-20220828235838872.png)
+![image](https://user-images.githubusercontent.com/107009198/187581879-21106551-f867-4ee2-81f5-9d6fd49e0476.png)
 
-![image-20220828235853267](C:\Users\isacc\AppData\Roaming\Typora\typora-user-images\image-20220828235853267.png)
+![image](https://user-images.githubusercontent.com/107009198/187581898-01a0cc5a-26b5-45b9-98b6-24a5d9ea0785.png)
 
-![image-20220828235910103](C:\Users\isacc\AppData\Roaming\Typora\typora-user-images\image-20220828235910103.png)
+![image](https://user-images.githubusercontent.com/107009198/187581917-ee02d398-7264-4c49-95e5-13f9977a4c19.png)
 
-![image-20220828235924146](C:\Users\isacc\AppData\Roaming\Typora\typora-user-images\image-20220828235924146.png)
+![image](https://user-images.githubusercontent.com/107009198/187581938-8b548a15-e225-49a9-8018-3f51f9884b16.png)
 
 
 
