@@ -1,4 +1,4 @@
-# Projeto - Resumo de conteúdo do Curso de Introdução ao Git e GitHub :happy:
+# Projeto - Resumo de conteúdo do Curso de Introdução ao Git e GitHub
 
 Olá, este projeto foi proposto no curso de Introdução ao Git e GitHub do Bootcamp **Database Experience** da plataforma Digital Innovation One.
 
