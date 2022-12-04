@@ -4,6 +4,8 @@ Olá, este projeto foi proposto no curso de Introdução ao Git e GitHub do Boot
 
 Decidi desenvolver uma página web simples, utilizando apenas HTML e CSS, com intuito de fixar o conteúdo abordado neste curso.
 
+link para a pagina via github pages: https://isaccsz.github.io/Desafio_Dio_criarReposit-rio/
+
 Abaixo, screenshots da página pronta:
 
 ![image](https://user-images.githubusercontent.com/107009198/187581871-c223ffde-7a38-4a67-8edb-e30aa00e6dbe.png)
